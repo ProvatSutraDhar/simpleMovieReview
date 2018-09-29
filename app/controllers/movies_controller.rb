@@ -19,7 +19,8 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
-  end
+    @movie = Movie.find params[:id]
+    end
 
   # POST /movies
   # POST /movies.json
@@ -41,9 +42,9 @@ class MoviesController < ApplicationController
   # PATCH/PUT /movies/1.json
   def update
     respond_to do |format|
-      if @movie.update(movie_params)
-        format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
-        format.json { render :show, status: :ok, location: @movie }
+     if @movie.update(movie_params)
+       format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
+       format.json { render :show, status: :ok, location: @movie }
       else
         format.html { render :edit }
         format.json { render json: @movie.errors, status: :unprocessable_entity }
@@ -69,6 +70,6 @@ class MoviesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :description, :movie_lengh, :director, :rating)
+      params.require(:movie).permit(:title, :description, :movie_lengh, :director, :rating, :image)
     end
 end
