@@ -1,33 +1,40 @@
-<%= image_tag @movie.image.url(:medium) %>
+<div class = "panel.panel-defaul">
+    <div div class="panel-body"> </div>
+        <div class="row">
+            <div class="col-md-4">
+               <%= image_tag @movie.image.url(:medium) %>
+                   <div class="table-responsive">
+                       <table class="table">
+                          <tbody>
+                             <tr>
+                             <td> <strong>Title:</strong> </td>
+                             <td> <%= @movie.title %> </td>
+                             </tr>
 
-<p>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
+                             <tr>
+                             <td> <strong>Description:</strong> </td>
+                             <td>  <%= @movie.description %></td>
+                             </tr>
+                             
+                             <tr>
+                             <td> <strong>Movie lengh:</strong></td>
+                             <td> <%= @movie.movie_lengh %></td>
+                             </tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
 
-<p>
-  <strong>Movie lengh:</strong>
-  <%= @movie.movie_lengh %>
-</p>
+                             <tr>
+                             <td> <strong>Director:</strong></td>
+                             <td> <%= @movie.director %></td>
+                             </tr>
 
-<p>
-  <strong>Director:</strong>
-  <%= @movie.director %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @movie.rating %>
-</p>
-<p>
-  <strong>Image:</strong>
-  <%= @movie.image_tag %>
-</p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+                             <tr>
+                             <td>  <strong>Rating:</strong> </td>
+                             <td> <%= @movie.rating %></td>
+                             </tr>
+                           
+                           </tbody>
+                        </table>
+                  </div>
+             </div>
+      </div>
+ </div>
