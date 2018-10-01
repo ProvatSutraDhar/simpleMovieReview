@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.5'
 gem 'paperclip', '~> 6.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
